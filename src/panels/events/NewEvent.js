@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import {TextInput} from "../../elements"
 import axios from "axios"
+import LoginButton from "../../elements/LoginButton";
 
 class NewEvent extends Component {
 
@@ -37,7 +38,7 @@ class NewEvent extends Component {
         <TextInput id="date" type="date" name="eventDate" placeholder="Data Wydarzenia"/>
         <TextInput id="place" type="text" name="eventPlace" placeholder="Miejsce wydarzenia"/>
         <TextInput id="description" type="text"  name="eventDescription"  placeholder="Opis"/>
-        <button className="button" onClick={this.createEventFunction.bind(this)}>Utwórz wydarzenie</button> 
+        <LoginButton func={this.createEventFunction.bind(this)} name="Utwórz wydarzenie"/>
       </div>
     );
   }
