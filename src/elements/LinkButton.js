@@ -4,11 +4,11 @@ import { NavLink } from "react-router-dom";
 class LinkButton extends Component {
     render() {
       return (
-        <NavLink exact to={this.props.link}>
-          <div className="button">
+        <div>
+          <NavLink className="button" exact to={this.props.link}>
             <h3>{this.props.name}</h3>
-          </div>
-        </NavLink>
+          </NavLink>
+        </div>
       );
     }
   }
