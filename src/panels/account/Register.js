@@ -5,14 +5,24 @@ import LoginButton from "../../elements/LoginButton";
 class Register extends Component {
 
   RegisterUser() {
-    var login = document.getElementById('loginField').value
-    var pass1 = document.getElementById('passField1').value
-    var pass2 = document.getElementById('passField2').value
-    var name = document.getElementById('nameField').value
-    var surname = document.getElementById('surnameField').value
-    var email = document.getElementById('emailField').value
-    alert("Login: " + login + "\nHasło: " + pass1 + "\nHasło2: " + pass2 + "\nImię: " + name + "\nNazwisko: " + surname + "\nemail: " + email);
-    window.location.href = ('#/home');
+    var login = document.getElementById('loginField')
+    var pass1 = document.getElementById('passField1')
+    var pass2 = document.getElementById('passField2')
+    var name = document.getElementById('nameField')
+    var surname = document.getElementById('surnameField')
+    var email = document.getElementById('emailField')
+
+    if(pass1.value === pass2.value)
+      {
+      if(login.checkValidity() && pass1.checkValidity() && pass2.checkValidity() && name.checkValidity() && surname.checkValidity() && email.checkValidity()){
+        alert("Login: " + login.value + "\nHasło: " + pass1.value + "\nHasło2: " + pass2.value + "\nImię: " + name.value + "\nNazwisko: " + surname.value + "\nemail: " + email.value);
+        window.location.href = ('#/home');
+      } else {
+        alert("Conajmniej jedno pole nie jest wypełnione prawidłowo");
+      }
+    } else {
+      alert("Podane hasła nie są jednakowe");
+    }
   }
 
   render() {

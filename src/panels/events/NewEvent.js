@@ -16,7 +16,7 @@ class NewEvent extends Component {
         <TextInput type="date" name="eventDate" placeholder="Data Wydarzenia"/>
         <TextInput type="text" name="eventPlace" placeholder="Miejsce wydarzenia"/>
         <TextInput type="text"  name="eventDescription"  placeholder="Opis"/>
-        <button className="button" onClick={this.createEventFunction.bind(this)}>Utworz wydarzenie</button> 
+        <button className="button" onClick={this.createEventFunction.bind(this)}>Utwórz wydarzenie</button> 
       </div>
     );
   }

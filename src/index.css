@@ -62,9 +62,16 @@ body {
     text-decoration: none;
     display: inline-block;
     font-size: 12px;
+    box-shadow: -3px 3px rgb(70, 70, 70);
+    transition-duration: 0.4s;
   }
   .button:hover {
     background-color: #58f332;
+    cursor: pointer;
+  }
+  .button:active {
+    box-shadow: -2px 2px #666;
+    transform: translate3d(-2px, 2px, 0px);
   }
   a:link {
     color: #44c723;
@@ -79,7 +86,8 @@ body {
     border: 2px solid #2d8616;
     border-radius: 4px;
     margin: 10px 10px 10px 10px;
-    padding: 5px 5px 5px 5px
+    padding: 5px 5px 5px 5px;
+    box-shadow: -3px 3px rgb(70, 70, 70);
   }
   input:focus {
     border: 2px solid #58f332;

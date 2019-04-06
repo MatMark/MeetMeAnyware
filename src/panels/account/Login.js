@@ -7,15 +7,22 @@ import axios from "axios"
 class Login extends Component {
 
   LoginUser(){
-    var login = document.getElementById('loginField').value
-    var password = document.getElementById('passwordField').value
-    axios.get('api/users/'+login+"/"+password).then(
-      res => {
-            if (res.data === true)
-            window.location.href = ('#/home');
-        else
-            alert("Podaj poprawny login i hasło!");
-    }).catch(res => alert(res))
+    var login = document.getElementById('loginField')
+    var password = document.getElementById('passwordField')
+
+    if(login.checkValidity() && password.checkValidity()){
+     
+      axios.get('api/users/'+login.value+"/"+password.value).then(
+        res => {
+              if (res.data === true)
+              window.location.href = ('#/home');
+          else
+              alert("Podaj poprawny login i hasło!");
+      }).catch(res => alert(res))
+
+    } else {
+      alert("Wszystkie pola muszą być wypełnione");
+    }
   }
 
   render() {
