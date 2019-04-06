@@ -5,7 +5,7 @@ class LoginButton extends Component {
       return (
         <div>
           <button className="button" onClick={this.props.func}>
-            <h3>{this.props.name}</h3>
+            <p>{this.props.name}</p>
           </button>
         </div>
       );
