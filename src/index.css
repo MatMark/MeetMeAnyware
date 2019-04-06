@@ -99,4 +99,20 @@ body {
     text-align: center;
     display: grid;
   }
+  #eventArray{
+    width: 100%;
+    height: 15em;
+    border: 5px solid green;
+    border-collapse: collapse;
+    margin-left:auto;
+    margin-right:auto;
+    font-size: 28px;
+    font-family: 'Inconsolata';
+    font-weight: 700;  
+ 
+  }
+  #eventArray td{
+    border: 5px solid green;
+    padding:5px;
+  }
  

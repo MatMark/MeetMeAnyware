@@ -18,7 +18,9 @@ import {
   FAQ,
   Harmonogram,
   AccountData,
-  Friends
+  Friends,
+  EditData,
+  ChangePassword
 } from './panels'
 
 class Main extends Component {
@@ -36,7 +38,9 @@ class Main extends Component {
               <Route path="/home/account/friends" component={Friends}/>
               <Route path="/home/account/harmonogram" component={Harmonogram}/>
               <Route path="/home/account/account-data" component={AccountData}/>
-          
+              <Route path="/home/account/edit-data" component={EditData}/>
+              <Route path="/home/account/edit-password" component={ChangePassword}/>
+              
               <Route path="/home/events" component={Events}/>
               <Route path="/home/events/new-event" component={NewEvent}/>
               <Route path="/home/events/search-event" component={SearchEvent}/>

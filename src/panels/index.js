@@ -3,7 +3,9 @@ export {default as Start} from './Start';
 export {default as About} from './About';
 
 export {default as Account} from './account/Account';
+export {default as ChangePassword} from './account/ChangePassword';
 export {default as AccountData} from './account/AccountData';
+export {default as EditData} from './account/EditData';
 export {default as Friends} from './account/Friends';
 export {default as Harmonogram} from './account/Harmonogram';
 export {default as Login} from './account/Login';
