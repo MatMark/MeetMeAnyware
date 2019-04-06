@@ -5,9 +5,7 @@ class Start extends Component {
   render() {
     return (
       <div>
-        <ul className="header">
           <Login/>
-        </ul>
       </div>
     );
   }

@@ -1,12 +1,15 @@
 import React, { Component } from "react";
-import { LinkButton }from "../../elements";
+import { NavLink } from "react-router-dom";
  
 class Account extends Component {
   render() {
     return (
       <div>
         <ul className="header">
-          <LinkButton name="Wyloguj" link="/logout"/>
+          <li><NavLink to="/home/account/friends">Znajomi</NavLink></li>
+          <li><NavLink to="/home/account/harmonogram">Harmonogram</NavLink></li>
+          <li><NavLink to="/home/account/account-data">Dane konta</NavLink></li>
+          <li><NavLink to="/logout">Wyloguj</NavLink></li>
         </ul>
       </div>
     );

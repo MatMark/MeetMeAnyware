@@ -17,6 +17,7 @@ body {
   ul.header li {
     display: inline;
     list-style-type: none;
+    padding: 1%;
     margin: auto;
   }
   ul.header {
@@ -31,23 +32,12 @@ body {
     padding: 20px;
     display: inline-block;
   }
-
   ul.header li:hover a{
     background-color: #344355;
-    color: #dddddd;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 20px;
-    display: inline-block;
   }
-
   ul.header li .active{
     background-color: #44c723;
     color: #1d1c1c;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 20px;
-    display: inline-block;
   }
   .content {
     background-color: #1f2833;
@@ -103,7 +93,9 @@ body {
   input:focus {
     border: 2px solid #58f332;
   }
-
+  input:invalid {
+    border: 2px solid #b32121;
+  }
   div.login {
     text-align: center;
     display: grid;

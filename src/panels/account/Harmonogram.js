@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 
-class NewEvent extends Component {
+class Harmonogram extends Component {
   render() {
     return (
       <div>
-        <h2>Nowe wydarzenie</h2> 
+        <h2>Harmonogram</h2> 
       </div>
     );
   }
 }
  
-export default NewEvent;
+export default Harmonogram;

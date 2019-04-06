@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 
-class NewEvent extends Component {
+class Friends extends Component {
   render() {
     return (
       <div>
-        <h2>Nowe wydarzenie</h2> 
+        <h2>Znajomi</h2> 
       </div>
     );
   }
 }
  
-export default NewEvent;
+export default Friends;
