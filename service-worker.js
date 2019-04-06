@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/MeetMeAnywhere/precache-manifest.f99b5090cccaedfa5f166b7714de2119.js"
+  "/MeetMeAnywhere/precache-manifest.d8457e77d9fd7f87a671eb1eadb85206.js"
 );
 
 workbox.clientsClaim();
