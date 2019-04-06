@@ -6,15 +6,7 @@ import axios from "axios"
  
 class Login extends Component {
 
-  
-  ClickMe() {
-    var login = document.getElementById('loginField').value
-    var password = document.getElementById('passwordField').value
-    alert("Login: " + login + "\nHasło: " + password);
-    window.location.href = ('#/home');
-  }
-
-  LogIn(){
+  LoginUser(){
     var login = document.getElementById('loginField').value
     var password = document.getElementById('passwordField').value
     axios.get('api/users/'+login+"/"+password).then(
@@ -32,7 +24,7 @@ class Login extends Component {
         <h2>Logowanie</h2>
         <TextInput id="loginField" type="text" name="login" placeholder="Login"/>
         <TextInput id="passwordField" type="password" name="password" placeholder="Hasło"/>
-        <LoginButton func={this.LogIn.bind(this)} name="Zaloguj"/>
+        <LoginButton func={this.LoginUser.bind(this)} name="Zaloguj"/>
         <p>Nie masz jeszcze konta? <NavLink to="/register">Zarejestruj się</NavLink></p>
       </div> 
     );
