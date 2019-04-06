@@ -1,6 +1,6 @@
 {
-  "homepage": "https://matmark.github.io/MeetMeAnyware",
-  "name": "meet-me-anyware",
+  "homepage": "https://matmark.github.io/MeetMeAnywhere",
+  "name": "meet-me-anywhere",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

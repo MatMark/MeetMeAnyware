@@ -23,7 +23,7 @@ class Main extends Component {
       return (
         <HashRouter>
           <div>
-            <h1>MeetMeAnyware</h1>
+            <h1>MeetMeAnywhere</h1>
             <div className="content">
               <Route exact path="/" component={Start}/>
               <Route path="/home" component={Home}/>
