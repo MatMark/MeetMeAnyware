@@ -3,14 +3,14 @@ body {
     padding: 20px;
     margin: 0;
   }
-  h2, ul{
+  ul{
     font-family: sans-serif;
   }
   h1 {
     font-family: sans-serif;
     color: #44c723;
   }
-  p, li, h2 {
+  p, li, h2, h3 {
     font-family: sans-serif;
     color: #dddddd;
   }
@@ -53,7 +53,7 @@ body {
     background-color: #1f2833;
     padding: 20px;
   }
-  .content h2 {
+  .content h2, h3 {
     padding: 0;
     margin: 0;
   }
@@ -65,6 +65,7 @@ body {
     border: none;
     border-radius: 8px;
     color: #dddddd;
+    margin: 10px 10px 10px 10px;
     padding: 10px 25px;
     font-weight: bold;
     text-align: center;
@@ -97,6 +98,7 @@ body {
     border: 2px solid #2d8616;
     border-radius: 4px;
     margin: 10px 10px 10px 10px;
+    padding: 5px 5px 5px 5px
   }
   input:focus {
     border: 2px solid #58f332;
@@ -105,6 +107,5 @@ body {
   div.login {
     text-align: center;
     display: grid;
-    
   }
  

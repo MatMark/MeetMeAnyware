@@ -6,10 +6,10 @@ class Events extends Component {
     return (
       <div>
         <ul className="header">
-              <li><NavLink to="/home/events/new-event">Utwórz wydarzenie</NavLink></li>
-              <li><NavLink to="/home/events/search-event">Szukaj wydarzenia</NavLink></li>
-              <li><NavLink to="/home/events/your-events">Twoje wydarzenia</NavLink></li>
-            </ul>
+          <li><NavLink to="/home/events/new-event">Utwórz wydarzenie</NavLink></li>
+          <li><NavLink to="/home/events/search-event">Szukaj wydarzenia</NavLink></li>
+          <li><NavLink to="/home/events/your-events">Twoje wydarzenia</NavLink></li>
+        </ul>
       </div>
     );
   }

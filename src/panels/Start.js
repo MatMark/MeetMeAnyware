@@ -4,11 +4,11 @@ import { Login } from "./";
 class Start extends Component {
   render() {
     return (
-          <div>
-            <ul className="header">
-               <Login/>
-            </ul>
-          </div>
+      <div>
+        <ul className="header">
+          <Login/>
+        </ul>
+      </div>
     );
   }
 }
