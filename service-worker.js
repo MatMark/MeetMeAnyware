@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/MeetMeAnyware/precache-manifest.72ed0a9e375e8170de00fda21c382800.js"
+  "/MeetMeAnywhere/precache-manifest.bec41abfd6228f7679a242562b9b24b2.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/MeetMeAnyware/index.html", {
+workbox.routing.registerNavigationRoute("/MeetMeAnywhere/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
