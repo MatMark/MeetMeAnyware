@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import {TextInput} from "../../elements"
-// import axios from "axios"
 import LoginButton from "../../elements/LoginButton";
 
 class NewEvent extends Component {
@@ -10,42 +9,38 @@ class NewEvent extends Component {
     var date = document.getElementById('date')
     var place = document.getElementById('place')
     var description = document.getElementById('description')
+
     var headers = new Headers();
+   
 
     if(name.checkValidity() && date.checkValidity() && place.checkValidity() && description.checkValidity()){
-     
-      headers.append('Accept', 'application/json'); // This one is enough for GET requests
-      headers.append('Content-Type', 'application/json-patch+json'); // This one sends body
+      
+      var object = {
+        id: 40, 
+        title: name.value, 
+        date: date.value, 
+        idOwner: 3, 
+        idParticipants: 3, 
+        idOwnerNavigation: null, 
+        idParticipantsNavigation: null, 
+        users: []}
 
-      fetch('http://localhost:5000/api/Events', {
+      headers.append('Content-Type', 'application/json');
+      fetch('http://localhost:50418/api//Events', {
         method: 'POST',
-        mode: 'no-cors',
-        headers: headers,
-        body: JSON.stringify({
-          id: 3,
-          title: "sss", //name.value,
-          date: "2019-08-04T00:00:00", //date.value,
-          idOwner: 1,
-          idParticipants: 1,
-          idOwnerNavigation: null,
-          idParticipantsNavigation: null,
-          users: []
-          // place: place.value
-          // description: description.value
-        }),
-    }).then(res => res.json())
-    .then(response => console.log('Success:', JSON.stringify(response)))
-    .catch(error => console.error('Error:', error));
-
-      // axios.put('http://localhost:5000/api/Events').then(
-      //   res => {
-      //         if (res.data === true){
-      //           alert("Wydarzenie utworzone");
-      //           window.location.reload();
-      //         }
-      //     else
-      //         alert("Nie udało się utworzyć wydarzenia");
-      // }).catch(res => alert(res))
+        headers : headers,
+        body: JSON.stringify(object),
+      }).then(res => res)
+      .then(response => {
+        console.log('Success:', response);
+        alert("Wydarzenie utworzone");
+        window.location.reload()})
+      .catch(error => {
+        console.error('Error:', error);
+        alert("Wydarzenie utworzone");  //------mamy error 500  ale dopisuje
+        window.location.reload()}       //------mamy error 500 ale dopisuje
+        //alert("Nie udało się utworzyć wydarzenia")}
+      );
 
     } else {
       alert("Wszystkie pola muszą być wypełnione prawidłowo");

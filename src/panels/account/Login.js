@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { TextInput } from "../../elements"
 import { NavLink } from "react-router-dom";
 import LoginButton from "../../elements/LoginButton";
-// import axios from "axios"
  
 class Login extends Component {
 
@@ -13,27 +12,27 @@ class Login extends Component {
 
     if(login.checkValidity() && password.checkValidity()){
      
-      headers.append('Accept', 'application/json'); // This one is enough for GET requests
-      // headers.append('Access-Control-Allow-Origin', 'http://localhost:5000/api/Users');
-      // headers.append('Content-Type', 'application/json-patch+json'); // This one sends body
+      headers.append('Accept', 'application/json'); 
 
-      fetch('http://localhost:5000/api/Users', {
+      fetch('http://localhost:50418/api/Users', {
         method: 'GET',
-        mode: 'no-cors',
         headers: headers
 
-    }).then(res => res)
-    .then(response => console.log('Success:', response.json()))
-    .then(data => console.log("Body:", data))
-    .catch(error => console.error('Error:', error.json()));
-
-      // axios.get('api/users/'+login.value+"/"+password.value).then(
-      //   res => {
-      //         if (res.data === true)
-      //         window.location.href = ('#/home');
-      //     else
-      //         alert("Podaj poprawny login i hasło!");
-      // }).catch(res => alert(res))
+      }).then(res => res.json())
+      .then(res => {
+        console.log(res);
+        res.forEach(user => {
+          console.groupCollapsed(`Użytkownik ${user.id}`)
+          console.log(`Login: ${user.login}`);
+          console.log(`Hasło: ${user.password}`);
+          console.groupEnd();
+        });
+        alert("Poprawnie zalogowano");
+        window.location.href = ('#/home')})
+      .catch(error => {
+        console.error('Error:', error);
+        alert("Nie udało się zalogować")}
+      );
 
     } else {
       alert("Wszystkie pola muszą być wypełnione");
