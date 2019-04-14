@@ -14,7 +14,11 @@ class Login extends Component {
      
       headers.append('Accept', 'application/json'); 
 
+<<<<<<< HEAD
         fetch('https://mmabackend.azurewebsites.net/api/Users', {
+=======
+      fetch('http://localhost:50418/api/Users', {
+>>>>>>> master
         method: 'GET',
         headers: headers
 

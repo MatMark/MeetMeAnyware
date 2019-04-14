@@ -16,7 +16,11 @@ class NewEvent extends Component {
     if(name.checkValidity() && date.checkValidity() && place.checkValidity() && description.checkValidity()){
       
       var object = {
+<<<<<<< HEAD
         id: 80, 
+=======
+        id: 40, 
+>>>>>>> master
         title: name.value, 
         date: date.value, 
         idOwner: 3, 
@@ -26,7 +30,11 @@ class NewEvent extends Component {
         users: []}
 
       headers.append('Content-Type', 'application/json');
+<<<<<<< HEAD
         fetch('https://mmabackend.azurewebsites.net/Events', {
+=======
+      fetch('http://localhost:50418/api//Events', {
+>>>>>>> master
         method: 'POST',
         headers : headers,
         body: JSON.stringify(object),
