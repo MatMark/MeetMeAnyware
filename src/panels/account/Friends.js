@@ -1,14 +1,13 @@
 import React, { Component } from "react";
-import { Login } from "./";
- 
-class Start extends Component {
+
+class Friends extends Component {
   render() {
     return (
       <div>
-          <Login/>
+        <h2>Znajomi</h2> 
       </div>
     );
   }
 }
  
-export default Start;
+export default Friends;

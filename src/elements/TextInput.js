@@ -6,7 +6,12 @@ class TextInput extends Component {
         <div>
           <form>
             <label>
-              <input type={this.props.type} name={this.props.name} placeholder={this.props.placeholder}/>
+              <input 
+                id={this.props.id}
+                type={this.props.type} 
+                name={this.props.name} 
+                placeholder={this.props.placeholder} 
+                required/>
             </label>
           </form>
         </div>

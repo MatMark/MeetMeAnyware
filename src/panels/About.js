@@ -5,7 +5,7 @@ class About extends Component {
     return (
       <div>
         <h2>Opis</h2>  
-        <p>MeetMeAnyware to aplikacja ułatwiająca organizację spotkań ze znajomymi</p>
+        <p>MeetMeAnywhere to aplikacja ułatwiająca organizację spotkań ze znajomymi</p>
       </div>
     );
   }

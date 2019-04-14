@@ -6,7 +6,7 @@ class LinkButton extends Component {
       return (
         <div>
           <NavLink className="button" exact to={this.props.link}>
-            <h3>{this.props.name}</h3>
+            <p>{this.props.name}</p>
           </NavLink>
         </div>
       );
